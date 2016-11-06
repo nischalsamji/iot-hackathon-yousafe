@@ -1,8 +1,8 @@
 'use strict';
 
-var accountSid = 'ACfab4c4dda9c64a173643fcd6fcf52735';
-var authToken = '76d4121e309ba2aaa47a978675f99b8c';
-var fromNumber = '+15169622805';
+var accountSid = '';
+var authToken = '';
+var fromNumber = '';
 
 var https = require('https');
 var queryString = require('querystring');
@@ -23,7 +23,7 @@ var queryString = require('querystring');
 
 const AWS = require('aws-sdk');
 
-const EMAIL = 'snimmag4@asu.edu';  // TODO change me
+const EMAIL = '';  // TODO change me
 const SNS = new AWS.SNS({ apiVersion: '2010-03-31' });
 
 
@@ -210,7 +210,7 @@ exports.handler = (event, context, callback) => {
         };
         // result will go to function callback
         SNS.publish(params, callback);
-        new SendSMS('+14803348770', params.Message, 
+        new SendSMS('', params.Message, 
                 function (status) { context.done(null, status); }); 
     });
 };
