@@ -16,6 +16,12 @@ static uint8_t position=0;
 static uint8_t WIN=2;
 static uint32_t TRESHOLD= 10000000;
 
+/*
+Implementation for fall detection was used from
+https://github.com/Hitheshaum/fall-detection
+*/
+
+
 /******************************* AppMessage ***********************************/
 
 static void send(int key, int message) {
